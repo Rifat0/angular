@@ -8,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   title = 'Product';
   imageUrl = 'https://via.placeholder.com/150/0000FF/808080%20?Text=Digital.com';
-  constructor() { }
+  isDisable = false;
+  count = 0;
+  name = 'Rifat';
 
+  constructor() { }
   ngOnInit() {
+
   }
 
+  counter(){
+    this.count++;
+    this.count === 10 ? this.isDisable = true : this.isDisable = false;
+  }
+  reset(){
+    this.count = 0;
+    this.isDisable = false;
+  }
 }
